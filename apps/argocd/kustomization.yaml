@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - albc-application.yaml
   - argocd-application.yaml
-  - argocd-ingress.yaml
+  # - argocd-ingress.yaml
   - argogrpc-service.yaml
   - coredns-application.yaml
   - external-secrets-application.yaml
