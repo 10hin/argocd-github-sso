@@ -34,6 +34,11 @@ iam:
         namespace: external-dns
       wellKnownPolicies:
         externalDNS: true
+    - metadata:
+        name: cert-manager
+        namespace: cert-manager
+      wellKnownPolicies:
+        certManager: true
 
 vpc:
   clusterEndpoints:
@@ -47,3 +52,5 @@ fargateProfiles:
       - namespace: kube-system
       - namespace: argocd
       - namespace: external-secrets
+      - namespace: external-dns
+      - namespace: cert-manager
