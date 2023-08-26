@@ -10,7 +10,7 @@ spec:
     repoURL: https://charts.jetstack.io
     targetRevision: 'v1.12.3'
     helm:
-      releaseName: external-dns
+      releaseName: cert-manager
       parameters:
         - name: installCRDs
           value: 'true'
