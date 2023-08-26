@@ -6,9 +6,12 @@ resources:
   - argocd-application.yaml
   - argocd-ingress.yaml
   - argogrpc-service.yaml
-  - coredns-appilcation.yaml
+  - coredns-application.yaml
   - external-secrets-application.yaml
   - install.yaml
   - manifest-source-externalsecret.yaml
   - namespaces-application.yaml
   - secrets-manager-secretstore.yaml
+
+patches:
+  - path: argocd-server-service.yaml
