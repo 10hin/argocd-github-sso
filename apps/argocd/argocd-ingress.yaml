@@ -2,6 +2,7 @@
   kind: Ingress
   metadata:
     annotations:
+      alb.ingress.kubernetes.io/scheme: internet-facing
       alb.ingress.kubernetes.io/backend-protocol: HTTPS
       # Use this annotation (which must match a service name) to route traffic to HTTP2 backends.
       alb.ingress.kubernetes.io/conditions.argogrpc: |
