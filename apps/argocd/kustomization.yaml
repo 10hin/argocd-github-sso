@@ -13,6 +13,7 @@ resources:
   - namespaces-application.yaml
   - secrets-manager-secretstore.yaml
   - id-source-externalsecret.yaml
+  - external-dns-application.yaml
 
 patches:
   - path: argocd-server-service.yaml

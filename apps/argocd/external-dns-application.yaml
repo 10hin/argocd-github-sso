@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: external-dns
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: aws-load-balancer-controller
+    repoURL: https://kubernetes-sigs.github.io/external-dns/
+    targetRevision: '1.13.0'
+    helm:
+      releaseName: external-dns
+      parameters:
+        - name: serviceAccount.create
+          value: 'false'
+        - name: serviceAccount.name
+          value: external-dns
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: external-dns
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
