@@ -1,24 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: external-dns
+  name: cert-manager
   namespace: argocd
 spec:
   project: default
   source:
-    chart: external-dns
-    repoURL: https://kubernetes-sigs.github.io/external-dns/
-    targetRevision: '1.13.0'
+    chart: aws-load-balancer-controller
+    repoURL: jetstack https://charts.jetstack.io
+    targetRevision: 'v1.12.3'
     helm:
       releaseName: external-dns
       parameters:
-        - name: serviceAccount.create
-          value: 'false'
-        - name: serviceAccount.name
-          value: external-dns
+        - name: installCRDs
+          value: 'true'
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: external-dns
+    namespace: cert-manager
   syncPolicy:
     automated:
       prune: true
