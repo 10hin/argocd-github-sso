@@ -108,7 +108,10 @@ spec:
           readOnly: true
         - mountPath: /tmp
           name: tmp
+      dnsPolicy: Default
+      priorityClassName: system-cluster-critical
       restartPolicy: Always
+      securityContext: {}
       serviceAccountName: coredns
       tolerations:
       - effect: NoSchedule
