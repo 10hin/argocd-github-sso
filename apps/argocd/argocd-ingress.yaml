@@ -10,6 +10,7 @@
     name: argocd
     namespace: argocd
   spec:
+    ingressClassName: alb
     rules:
     - host: argocd-server.argocd-github-sso.eks.10h.in
       http:
