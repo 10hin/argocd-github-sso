@@ -12,6 +12,8 @@ resources:
   - manifest-source-externalsecret.yaml
   - namespaces-application.yaml
   - secrets-manager-secretstore.yaml
+  - id-source-externalsecret.yaml
 
 patches:
   - path: argocd-server-service.yaml
+  - path: argocd-cm-configmap.yaml
