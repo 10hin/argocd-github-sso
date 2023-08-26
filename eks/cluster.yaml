@@ -18,7 +18,7 @@ iam:
       wellKnownPolicies:
         awsLoadBalancerController: true
     - metadata:
-        name: secret-manager
+        name: secrets-manager
         namespace: argocd
       attachPolicy:
         Version: "2012-10-17"
