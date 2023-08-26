@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+data:
+  url: https://argocd-server.argocd-github-sso.eks.10h.in
+  dex.config: |
+    connectors:
+      - type: github
+        id: github
+        name: GitHub
+        config:
+          clientID: 4d12249e206021f67208
+          cilentSecret: $id-source:dex.github.clientSecret
