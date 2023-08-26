@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/10hin/argocd-github-sso
-    targetRevision: main
+    repoURL: https://github.com/10hin/argocd-github-sso.git
+    targetRevision: master
     path: apps/argocd
   destination:
     server: https://kubernetes.default.svc
