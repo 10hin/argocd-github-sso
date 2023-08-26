@@ -52,7 +52,5 @@ fargateProfiles:
       - namespace: kube-system
       - namespace: argocd
       - namespace: external-secrets
-  - name: fp-add
-    selectors:
       - namespace: external-dns
       - namespace: cert-manager
