@@ -4,7 +4,9 @@ kind: Kustomization
 resources:
   - albc-application.yaml
   - argocd-application.yaml
-  # - argocd-ingress.yaml
+  # when spin-up: uncomment "argocd-ingress.yaml" to create ALB for ArgoCD
+  # when tear-down: comment out "argocd-ingress.yaml" to delete ALB for ArgoCD
+  - argocd-ingress.yaml
   - argogrpc-service.yaml
   - coredns-application.yaml
   - external-secrets-application.yaml
