@@ -23,4 +23,3 @@ resources:
 patches:
   - path: argocd-server-service.yaml
   - path: argocd-cm-configmap.yaml
-  - path: argocd-secret-secret.yaml
