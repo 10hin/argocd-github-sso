@@ -18,6 +18,8 @@ spec:
           value: 'false'
         - name: serviceAccount.name
           value: cert-manager
+        - name: webhook.securePort
+          value: '10251'
   destination:
     server: "https://kubernetes.default.svc"
     namespace: cert-manager
