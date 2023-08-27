@@ -29,6 +29,7 @@ iam:
             Resource:
               - arn:aws:secretsmanager:ap-northeast-1:129008548655:secret:argocd-github-sso-github-oauth-app-XkY8Iy
               - arn:aws:secretsmanager:ap-northeast-1:129008548655:secret:argocd-github-sso-argocd-M4a4WM
+              - arn:aws:secretsmanager:ap-northeast-1:129008548655:secret:argocd-github-sso-github-webhook-dOVfPz
     - metadata:
         name: external-dns
         namespace: external-dns

@@ -16,8 +16,8 @@ resources:
   - secrets-manager-secretstore.yaml
   - id-source-externalsecret.yaml
   - external-dns-application.yaml
-  - cert-manager-application.yaml
-  - cert-issuer-application.yaml
+  # - cert-manager-application.yaml
+  # - cert-issuer-application.yaml
   - github-webhook-externalsecret.yaml
 
 patches:
