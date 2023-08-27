@@ -34,3 +34,4 @@
     tls:
     - hosts:
       - argocd-server.argocd-github-sso.eks.10h.in
+      secretName: argocd-ingress-tls
