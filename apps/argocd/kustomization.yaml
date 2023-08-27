@@ -18,7 +18,9 @@ resources:
   - external-dns-application.yaml
   - cert-manager-application.yaml
   - cert-issuer-application.yaml
+  - github-webhook-externalsecret.yaml
 
 patches:
   - path: argocd-server-service.yaml
   - path: argocd-cm-configmap.yaml
+  - path: argocd-secret-secret.yaml
