@@ -54,6 +54,6 @@ fargateProfiles:
       - namespace: argocd
       - namespace: external-secrets
       - namespace: external-dns
-  - name: fp-default2
-    selectors:
-      - namespace: cert-manager
+  # - name: fp-default2
+  #   selectors:
+  #     - namespace: cert-manager
