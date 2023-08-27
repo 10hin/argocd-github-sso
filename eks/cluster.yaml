@@ -46,11 +46,13 @@ vpc:
     publicAccess: true
 
 fargateProfiles:
-  - name: fp-default
+  - name: fp-default1
     selectors:
       - namespace: default
       - namespace: kube-system
       - namespace: argocd
       - namespace: external-secrets
       - namespace: external-dns
+  - name: fp-default2
+    selectors:
       - namespace: cert-manager
