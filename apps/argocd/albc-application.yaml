@@ -18,8 +18,9 @@ spec:
           value: 'false'
         - name: serviceAccount.name
           value: aws-load-balancer-controller
-        - name: vpcId
-          value: vpc-0e25db76036a72e63
+        - # aws eks describe-cluster --name argocd-github-sso --query 'cluster.resourcesVpcConfig.vpcId' --output text
+          name: vpcId
+          value: vpc-05abb589ebfbb1e0b
   destination:
     server: "https://kubernetes.default.svc"
     namespace: kube-system
