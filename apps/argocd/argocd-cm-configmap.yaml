@@ -10,5 +10,5 @@ data:
         id: github
         name: GitHub
         config:
-          clientID: "4d12249e206021f67208"
+          clientID: "5c8abff232bd26765ab8"
           cilentSecret: $id-source:dex.github.clientSecret
