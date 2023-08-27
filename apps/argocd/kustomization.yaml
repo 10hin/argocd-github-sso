@@ -17,6 +17,7 @@ resources:
   - id-source-externalsecret.yaml
   - external-dns-application.yaml
   - cert-manager-application.yaml
+  - cert-issuer-application.yaml
 
 patches:
   - path: argocd-server-service.yaml
