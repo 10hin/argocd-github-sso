@@ -4,6 +4,8 @@ kind: ClusterConfig
 metadata:
   name: argocd-github-sso
   region: ap-northeast-1
+  tags:
+    Purpose: argocd-github-sso
 
 availabilityZones:
   - ap-northeast-1a
@@ -17,6 +19,8 @@ iam:
         namespace: kube-system
       wellKnownPolicies:
         awsLoadBalancerController: true
+      tags:
+        Purpose: argocd-github-sso
     - metadata:
         name: secrets-manager
         namespace: argocd
@@ -30,16 +34,22 @@ iam:
               - arn:aws:secretsmanager:ap-northeast-1:129008548655:secret:argocd-github-sso-github-oauth-app-XkY8Iy
               - arn:aws:secretsmanager:ap-northeast-1:129008548655:secret:argocd-github-sso-argocd-M4a4WM
               - arn:aws:secretsmanager:ap-northeast-1:129008548655:secret:argocd-github-sso-github-webhook-dOVfPz
+      tags:
+        Purpose: argocd-github-sso
     - metadata:
         name: external-dns
         namespace: external-dns
       wellKnownPolicies:
         externalDNS: true
+      tags:
+        Purpose: argocd-github-sso
     - metadata:
         name: cert-manager
         namespace: cert-manager
       wellKnownPolicies:
         certManager: true
+      tags:
+        Purpose: argocd-github-sso
 
 vpc:
   clusterEndpoints:
@@ -54,6 +64,10 @@ fargateProfiles:
       - namespace: argocd
       - namespace: external-secrets
       - namespace: external-dns
+    tags:
+      Purpose: argocd-github-sso
   # - name: fp-default2
   #   selectors:
   #     - namespace: cert-manager
+  #   tags:
+  #     Purpose: argocd-github-sso
