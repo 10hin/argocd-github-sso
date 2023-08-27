@@ -9,6 +9,7 @@
       alb.ingress.kubernetes.io/conditions.argogrpc: |
         [{"field":"http-header","httpHeaderConfig":{"httpHeaderName": "Content-Type", "values":["application/grpc"]}}]
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+      cert-manager.io/cluster-issuer: default
     name: argocd
     namespace: argocd
   spec:
